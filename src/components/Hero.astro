@@ -1,0 +1,89 @@
+---
+import Container from "./Container.astro";
+---
+
+<section class="hero">
+  <Container>
+    <div class="hero__box">
+      <div>
+        <h1 class="hero__title">
+          Gain millions of views on TikTok, grab your audience, be louder. And
+          we'll help.
+        </h1>
+        <a class="hero__link" href="#">Book a Free Strategy Session</a>
+        <p class="hero__description">
+          Let's get to know each other on this 30min call
+        </p>
+      </div>
+      <div class="image__box">
+        <img src="/hero/Hero/Rectangle 37.png" alt="logo" />
+      </div>
+    </div>
+  </Container>
+</section>
+
+<style>
+  .hero__box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .hero__title {
+    max-width: 523px;
+    color: var(--Text-Headlines, #fff);
+    font-family: "DM Sans";
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-block-end: 48px;
+  }
+  .hero__link {
+    display: block;
+    padding-block: 19px;
+    padding-inline: 48px;
+    color: var(--Button-Text, #fff);
+    text-align: center;
+    font-family: "DM Sans";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    border-radius: 100px;
+    background: #fa0369;
+    max-width: 342px;
+    margin-block-end: 10px;
+  }
+  .hero__description {
+    padding-inline-start: 32px;
+    color: var(--Text-Body, #7e8597);
+    font-family: "DM Sans";
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .image__box {
+    max-width: 560px;
+    position: relative;
+  }
+
+  .image__box::after {
+    content: "";
+    display: block;
+    width: 560px;
+    height: 560px;
+    border-radius: 24px;
+    background: var(
+      --Gradients-Dusk,
+      linear-gradient(180deg, #432371 0%, #faae7b 100%)
+    );
+    position: absolute;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+  }
+</style>
