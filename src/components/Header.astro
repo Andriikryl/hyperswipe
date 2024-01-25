@@ -2,10 +2,40 @@
 import Container from "./Container.astro";
 ---
 
-<header>
+<header class="header">
   <Container>
-    <div>das</div>
+    <div class="header__box">
+      <a class="header__log" href="/">
+        <img src="/logo/Hero/Navbars/8 (1) 1.svg" alt="Hiperswipe" />
+      </a>
+      <button class="header__btn">Let’s chat</button>
+    </div>
   </Container>
 </header>
 
-<style></style>
+<style>
+  .header {
+    padding-block: 29px;
+  }
+  .header__box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .header__btn {
+    padding-block: 10px;
+    padding-inline: 24px;
+    color: var(--Text-Headlines, #fff);
+    text-align: center;
+    font-family: "DM Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    border-radius: 100px;
+    background: var(--Buttons-Secondary, rgba(255, 255, 255, 0.1));
+    border: none;
+    cursor: pointer;
+  }
+</style>
