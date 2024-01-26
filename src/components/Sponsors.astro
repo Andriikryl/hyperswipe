@@ -1,0 +1,55 @@
+---
+import Container from "./Container.astro";
+
+const sponsorsData = [
+  {
+    src: "/sponsors/one.svg",
+    alt: "sponsor",
+  },
+  {
+    src: "/sponsors/two.svg",
+    alt: "sponsor",
+  },
+  {
+    src: "/sponsors/three.svg",
+    alt: "sponsor",
+  },
+  {
+    src: "/sponsors/four.svg",
+    alt: "sponsor",
+  },
+];
+---
+
+<section class="sponsors">
+  <Container>
+    <div class="sposors__box">
+      <ul class="list" role="list">
+        {
+          sponsorsData.map((item) => {
+            return (
+              <li class="list__item">
+                {" "}
+                <img src={item.src} alt={item.alt} />
+              </li>
+            );
+          })
+        }
+      </ul>
+    </div>
+  </Container>
+</section>
+
+<style>
+  .sponsors {
+    padding-block: 90px;
+  }
+  .list {
+    padding-inline-start: 0px;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+</style>
