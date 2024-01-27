@@ -1,0 +1,90 @@
+---
+import BookLink from "./BookLink.astro";
+import Container from "./Container.astro";
+---
+
+<section class="us">
+  <Container>
+    <div class="us__box">
+      <h3 class="us__title">Why us?</h3>
+      <div class="flex__group">
+        <div class="image__box">
+          <img src="/us/image.png" alt="image" />
+        </div>
+        <div class="us__info">
+          <h4 class="us__title-info">Creatives that sell.</h4>
+          <p class="us__description">
+            Have you heard of the famous saying “Create TikToks, not ads?" Well
+            - we don’t follow that crap. Our creators and editors are trained to
+            build UGC ads that take a customer from A (cold) to Z (purchasers)
+            through our modular creative framework, which allows us to maximize
+            the lifecycle of a creative..
+          </p>
+          <BookLink />
+        </div>
+      </div>
+    </div>
+  </Container>
+</section>
+
+<style>
+  .us {
+    padding-block: 90px;
+  }
+  .flex__group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .us__title-info {
+    color: var(--Text-Headlines, #fff);
+    font-family: "DM Sans";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-block-end: 16px;
+  }
+  .us__description {
+    max-width: 460px;
+    color: var(--Text-Body, #7e8597);
+    font-family: "DM Sans";
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 31.5px */
+    margin-block-end: 48px;
+  }
+  .us__title {
+    color: var(--Text-Headlines, #fff);
+    text-align: center;
+    font-family: "DM Sans";
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-block-end: 60px;
+  }
+  .image__box {
+    max-width: 381px;
+    position: relative;
+  }
+
+  .image__box::after {
+    content: "";
+    display: block;
+    width: 558px;
+    height: 530px;
+    border-radius: 24px;
+    background: var(
+      --Gradients-Dusk,
+      linear-gradient(180deg, #432371 0%, #faae7b 100%)
+    );
+    position: absolute;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+  }
+</style>
