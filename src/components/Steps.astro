@@ -1,0 +1,127 @@
+---
+import Container from "./Container.astro";
+import Mous from "../icons/Mous.astro";
+
+const stepsData = [
+  {
+    description: "Step 1",
+    title: "Easy one-click communication",
+    // img: <Mous />,
+  },
+  {
+    description: "Step 2",
+    title: "See if our offer is right for you",
+    // img: <Mous />,
+  },
+  {
+    description: "Step 3",
+    title: "Rapid Delivery",
+    // img: <Mous />,
+  },
+  {
+    description: "Step 4",
+    title: "Ad launch",
+    // img: <Mous />,
+  },
+];
+---
+
+<section class="steps">
+  <Container>
+    <div class="steps__box">
+      <p class="steps__description">Start in seconds</p>
+      <h3 class="steps__title">Get started in four easy steps</h3>
+      <ul role="list" class="list">
+        {
+          stepsData.map((step) => {
+            return (
+              <li class="list__item">
+                <div class="item__image">
+                  <Mous />
+                </div>
+                <p class="item__descripion">{step.description}</p>
+                <h4 class="item__title">{step.title}</h4>
+              </li>
+            );
+          })
+        }
+      </ul>
+    </div>
+  </Container>
+</section>
+
+<style>
+  .steps {
+    padding-block: 90px;
+  }
+  .list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  .list__item {
+    min-height: 262px;
+    flex-grow: 1;
+    flex-shrink: 0;
+    max-width: 264px;
+    border-radius: 24px;
+    background: var(--Mockup-Background, #141a25);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-block-start: 56px;
+    padding-block-end: 30px;
+  }
+  .item__image {
+    margin-block-end: 42px;
+  }
+  .item__descripion {
+    color: #fff;
+    text-align: center;
+    font-family: "DM Sans";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-block: 5px;
+    padding-inline: 14px;
+    border-radius: 63px;
+    background: var(--Highlight, #fa0369);
+    margin-block-end: 12px;
+  }
+  .steps__description {
+    color: var(--Highlight, #fa0369);
+    text-align: center;
+    font-family: "DM Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    margin-block-end: 15px;
+  }
+  .steps__title {
+    color: var(--Text-Headlines, #fff);
+    text-align: center;
+    font-family: "DM Sans";
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-block-end: 59px;
+  }
+  .item__title {
+    text-wrap: balance;
+    max-width: 200px;
+    color: var(--Text-Body, #7e8597);
+    text-align: center;
+    font-family: "DM Sans";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+</style>
