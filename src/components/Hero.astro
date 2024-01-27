@@ -1,4 +1,5 @@
 ---
+import BookLink from "./BookLink.astro";
 import Container from "./Container.astro";
 ---
 
@@ -10,7 +11,7 @@ import Container from "./Container.astro";
           Gain millions of views on TikTok, grab your audience, be louder. And
           we'll help.
         </h1>
-        <a class="hero__link" href="#">Book a Free Strategy Session</a>
+        <BookLink />
         <p class="hero__description">
           Let's get to know each other on this 30min call
         </p>
@@ -39,22 +40,7 @@ import Container from "./Container.astro";
     line-height: normal;
     margin-block-end: 48px;
   }
-  .hero__link {
-    display: block;
-    padding-block: 19px;
-    padding-inline: 48px;
-    color: var(--Button-Text, #fff);
-    text-align: center;
-    font-family: "DM Sans";
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    border-radius: 100px;
-    background: #fa0369;
-    max-width: 342px;
-    margin-block-end: 10px;
-  }
+
   .hero__description {
     padding-inline-start: 32px;
     color: var(--Text-Body, #7e8597);
